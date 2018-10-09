@@ -10,6 +10,7 @@ import UIKit
 
 class PageCell: UICollectionViewCell {
     
+    
     var page: Page? {
         didSet {
             guard let unwrappedPage = page else { return }
@@ -55,6 +56,7 @@ class PageCell: UICollectionViewCell {
         super.init(frame: frame)
         // backgroundColor = .purple
         setupViews()
+        
     }
     
     func setupViews() {
