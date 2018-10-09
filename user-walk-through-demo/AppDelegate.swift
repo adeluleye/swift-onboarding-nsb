@@ -17,8 +17,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         window = UIWindow(frame: UIScreen.main.bounds)
-        let rootViewController = ViewController()
-        window?.rootViewController = rootViewController
+        
+        // let rootViewController = ViewController()
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        let swipingController = SwipingController(collectionViewLayout: layout)
+        window?.rootViewController = swipingController
+        
         window?.makeKeyAndVisible()
         
         return true
