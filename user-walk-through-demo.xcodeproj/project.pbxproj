@@ -12,6 +12,8 @@
 		E95807BF216C23F000139E1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E95807BE216C23F000139E1D /* Assets.xcassets */; };
 		E95807C2216C23F000139E1D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E95807C0216C23F000139E1D /* LaunchScreen.storyboard */; };
 		E95807CA216C282A00139E1D /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95807C9216C282A00139E1D /* UIView+Extension.swift */; };
+		E95807CC216CF59900139E1D /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95807CB216CF59900139E1D /* UIStackView+Extension.swift */; };
+		E95807CE216D068600139E1D /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95807CD216D068600139E1D /* UIColor+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		E95807C1216C23F000139E1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E95807C3216C23F000139E1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E95807C9216C282A00139E1D /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		E95807CB216CF59900139E1D /* UIStackView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
+		E95807CD216D068600139E1D /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +58,9 @@
 		E95807B6216C23EE00139E1D /* user-walk-through-demo */ = {
 			isa = PBXGroup;
 			children = (
+				E95807CD216D068600139E1D /* UIColor+Extension.swift */,
 				E95807C9216C282A00139E1D /* UIView+Extension.swift */,
+				E95807CB216CF59900139E1D /* UIStackView+Extension.swift */,
 				E95807B7216C23EE00139E1D /* AppDelegate.swift */,
 				E95807B9216C23EE00139E1D /* ViewController.swift */,
 				E95807BE216C23F000139E1D /* Assets.xcassets */,
@@ -135,8 +141,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E95807CA216C282A00139E1D /* UIView+Extension.swift in Sources */,
+				E95807CC216CF59900139E1D /* UIStackView+Extension.swift in Sources */,
 				E95807BA216C23EE00139E1D /* ViewController.swift in Sources */,
 				E95807B8216C23EE00139E1D /* AppDelegate.swift in Sources */,
+				E95807CE216D068600139E1D /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

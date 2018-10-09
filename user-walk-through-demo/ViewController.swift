@@ -37,16 +37,41 @@ class ViewController: UIViewController {
         return textView
     }()
     
+    let previousButton: UIButton = {
+        let button = UIButton(type: .system)
+        let attributedString = NSMutableAttributedString(attributedString: NSAttributedString(string: "PREV", attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 14), .foregroundColor: UIColor.red]))
+        button.setAttributedTitle(attributedString, for: .normal)
+        return button
+    }()
+    
+    let nextButton: UIButton = {
+        let button = UIButton(type: .system)
+        let attributedString = NSMutableAttributedString(attributedString: NSAttributedString(string: "NEXT", attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 14), .foregroundColor: UIColor.blue]))
+        button.setAttributedTitle(attributedString, for: .normal)
+        return button
+    }()
+    
+    let pageControl: UIPageControl = {
+        let pc = UIPageControl()
+        pc.currentPage = 0
+        pc.numberOfPages = 4
+        pc.currentPageIndicatorTintColor = .orangeColor
+        pc.pageIndicatorTintColor = .gray
+        return pc
+    }()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.backgroundColor = .white
+        
         setupView()
+        setupBottomControls()
         
     }
     
     private func setupView() {
-        view.backgroundColor = .white
         
         view.addSubview(topImageContainerView)
         view.addSubview(descriptionTextView)
@@ -66,6 +91,17 @@ class ViewController: UIViewController {
         
         
         descriptionTextView.setAnchor(top: topImageContainerView.bottomAnchor, topPad: 20, bottom: nil, bottomPad: 0, left: view.leftAnchor, leftPad: 16, right: view.rightAnchor, rightPad: 16, height: 0, width: 0)
+    }
+    
+    func setupBottomControls() {
+        
+        let stackView = view.createStackView(views: [previousButton,
+                                                     pageControl,
+                                                     nextButton])
+        
+        view.addSubview(stackView)
+        
+        stackView.setAnchor(top: nil, topPad: 0, bottom: view.safeBottomAnchor, bottomPad: 0, left: view.safeLeftAnchor, leftPad: 16, right: view.safeRightAnchor, rightPad: 16, height: 0, width: 0)
     }
 
 
