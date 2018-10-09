@@ -9,10 +9,25 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    let bearImageView: UIImageView = {
+        let image = UIImage(named: "bear_first")
+        let imageView = UIImageView(image: image)
+        imageView.contentMode = .scaleAspectFit
+        return imageView
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        setupView()
+        
+    }
+    
+    func setupView() {
+        view.backgroundColor = .white
+        
+        view.addSubview(bearImageView)
     }
 
 
