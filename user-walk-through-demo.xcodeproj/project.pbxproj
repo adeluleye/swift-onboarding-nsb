@@ -16,6 +16,7 @@
 		E95807CE216D068600139E1D /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95807CD216D068600139E1D /* UIColor+Extension.swift */; };
 		E95807D0216D0A4A00139E1D /* SwipingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95807CF216D0A4A00139E1D /* SwipingController.swift */; };
 		E95807D2216D148800139E1D /* PageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95807D1216D148800139E1D /* PageCell.swift */; };
+		E95807D4216D1FCB00139E1D /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95807D3216D1FCB00139E1D /* Page.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		E95807CD216D068600139E1D /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		E95807CF216D0A4A00139E1D /* SwipingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipingController.swift; sourceTree = "<group>"; };
 		E95807D1216D148800139E1D /* PageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCell.swift; sourceTree = "<group>"; };
+		E95807D3216D1FCB00139E1D /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				E95807B9216C23EE00139E1D /* ViewController.swift */,
 				E95807CF216D0A4A00139E1D /* SwipingController.swift */,
 				E95807D1216D148800139E1D /* PageCell.swift */,
+				E95807D3216D1FCB00139E1D /* Page.swift */,
 				E95807BE216C23F000139E1D /* Assets.xcassets */,
 				E95807C0216C23F000139E1D /* LaunchScreen.storyboard */,
 				E95807C3216C23F000139E1D /* Info.plist */,
@@ -148,6 +151,7 @@
 			files = (
 				E95807CA216C282A00139E1D /* UIView+Extension.swift in Sources */,
 				E95807CC216CF59900139E1D /* UIStackView+Extension.swift in Sources */,
+				E95807D4216D1FCB00139E1D /* Page.swift in Sources */,
 				E95807BA216C23EE00139E1D /* ViewController.swift in Sources */,
 				E95807B8216C23EE00139E1D /* AppDelegate.swift in Sources */,
 				E95807CE216D068600139E1D /* UIColor+Extension.swift in Sources */,

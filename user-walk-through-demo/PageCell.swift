@@ -10,22 +10,36 @@ import UIKit
 
 class PageCell: UICollectionViewCell {
     
-    let topImageContainerView: UIView = {
+    var page: Page? {
+        didSet {
+            guard let unwrappedPage = page else { return }
+            bearImageView.image = UIImage(named: unwrappedPage.imageName)
+            
+            let attributedText = NSMutableAttributedString(string: unwrappedPage.headerText, attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 18)])
+            
+            attributedText.append(NSAttributedString(string: "\n\n\n\(unwrappedPage.bodyText)", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14), .foregroundColor: UIColor.gray]))
+            
+            descriptionTextView.attributedText = attributedText
+            descriptionTextView.textAlignment = .center
+        }
+    }
+    
+    private let topImageContainerView: UIView = {
         let view = UIView(frame: .zero)
         // view.backgroundColor = .blue
         return view
     }()
     
-    let bearImageView: UIImageView = {
+    private let bearImageView: UIImageView = {
         let image = UIImage(named: "bear_first")
         let imageView = UIImageView(image: image)
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()
     
-    let descriptionTextView: UITextView = {
+    private let descriptionTextView: UITextView = {
         let textView = UITextView()
-        let attributedText = NSMutableAttributedString(string: "Join us today at Prepa and be part of our network", attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 18), .foregroundColor: UIColor.black])
+        let attributedText = NSMutableAttributedString(string: "Join us today at Prepa and be part of our network", attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 18)])
         
         attributedText.append(NSAttributedString(string: "\n\n\nAre you ready for fun way of learning and pass your examination in one sitting using our platform", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14), .foregroundColor: UIColor.gray]))
         
