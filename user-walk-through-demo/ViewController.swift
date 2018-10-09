@@ -10,6 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    let topImageContainerView: UIView = {
+        let view = UIView(frame: .zero)
+        // view.backgroundColor = .blue
+        return view
+    }()
+    
     let bearImageView: UIImageView = {
         let image = UIImage(named: "bear_first")
         let imageView = UIImageView(image: image)
@@ -19,16 +25,19 @@ class ViewController: UIViewController {
     
     let descriptionTextView: UITextView = {
         let textView = UITextView()
-        textView.text = "Join us today at Prepa and be part of our network!"
-        textView.textColor = .black
-        textView.font = UIFont.boldSystemFont(ofSize: 18)
+        let attributedText = NSMutableAttributedString(string: "Join us today at Prepa and be part of our network", attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 18), .foregroundColor: UIColor.black])
+        
+        attributedText.append(NSAttributedString(string: "\n\n\nAre you ready for fun way of learning and pass your examination in one sitting using our platform", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14), .foregroundColor: UIColor.gray]))
+        
+        textView.attributedText = attributedText
         textView.textAlignment = .center
         textView.isEditable = false
         textView.isScrollEnabled = false
+        
         return textView
     }()
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -37,17 +46,26 @@ class ViewController: UIViewController {
     }
     
     private func setupView() {
-        
         view.backgroundColor = .white
-        view.addSubview(bearImageView)
+        
+        view.addSubview(topImageContainerView)
         view.addSubview(descriptionTextView)
         
-        bearImageView.setAnchor(top: view.topAnchor, topPad: 100, bottom: nil, bottomPad: 0, left: nil, leftPad: 0, right: nil, rightPad: 0, height: 200, width: 200)
+        topImageContainerView.addSubview(bearImageView)
         
-        bearImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         
-        descriptionTextView.setAnchor(top: bearImageView.bottomAnchor, topPad: 100, bottom: nil, bottomPad: 0, left: view.leftAnchor, leftPad: 16, right: view.rightAnchor, rightPad: 16, height: 100, width: 0)
+        topImageContainerView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.5).isActive = true
         
+        topImageContainerView.setAnchor(top: view.topAnchor, topPad: 0, bottom: nil, bottomPad: 0, left: view.leftAnchor, leftPad: 0, right: view.rightAnchor, rightPad: 0, height: 0, width: 0)
+        
+        
+        bearImageView.translatesAutoresizingMaskIntoConstraints = false
+        bearImageView.heightAnchor.constraint(equalTo: topImageContainerView.heightAnchor, multiplier: 0.5).isActive = true
+        bearImageView.centerYAnchor.constraint(equalTo: topImageContainerView.centerYAnchor).isActive = true
+        bearImageView.centerXAnchor.constraint(equalTo: topImageContainerView.centerXAnchor).isActive = true
+        
+        
+        descriptionTextView.setAnchor(top: topImageContainerView.bottomAnchor, topPad: 20, bottom: nil, bottomPad: 0, left: view.leftAnchor, leftPad: 16, right: view.rightAnchor, rightPad: 16, height: 0, width: 0)
     }
 
 
