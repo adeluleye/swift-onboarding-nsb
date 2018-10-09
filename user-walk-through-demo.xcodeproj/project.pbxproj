@@ -20,6 +20,7 @@
 		E95807D6216D61B900139E1D /* SwipingController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95807D5216D61B900139E1D /* SwipingController+Extension.swift */; };
 		E95807D8216D625E00139E1D /* SwipingController+UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95807D7216D625E00139E1D /* SwipingController+UICollectionView.swift */; };
 		E95807DA216D632400139E1D /* SwipingController+UIScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95807D9216D632400139E1D /* SwipingController+UIScrollView.swift */; };
+		E95807E3216D666400139E1D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E95807E2216D666400139E1D /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		E95807D5216D61B900139E1D /* SwipingController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwipingController+Extension.swift"; sourceTree = "<group>"; };
 		E95807D7216D625E00139E1D /* SwipingController+UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwipingController+UICollectionView.swift"; sourceTree = "<group>"; };
 		E95807D9216D632400139E1D /* SwipingController+UIScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwipingController+UIScrollView.swift"; sourceTree = "<group>"; };
+		E95807E2216D666400139E1D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		E95807AB216C23EE00139E1D = {
 			isa = PBXGroup;
 			children = (
+				E95807E2216D666400139E1D /* Default-568h@2x.png */,
 				E95807B6216C23EE00139E1D /* user-walk-through-demo */,
 				E95807B5216C23EE00139E1D /* Products */,
 			);
@@ -70,22 +73,62 @@
 		E95807B6216C23EE00139E1D /* user-walk-through-demo */ = {
 			isa = PBXGroup;
 			children = (
+				E95807E1216D65FB00139E1D /* Supporting Files */,
+				E95807DD216D650E00139E1D /* Extensions */,
+				E95807DE216D653000139E1D /* SwipingModel */,
+				E95807E0216D658900139E1D /* SwipingController */,
+				E95807DF216D654A00139E1D /* SwipingView */,
+				E95807B9216C23EE00139E1D /* ViewController.swift */,
+			);
+			path = "user-walk-through-demo";
+			sourceTree = "<group>";
+		};
+		E95807DD216D650E00139E1D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
 				E95807CD216D068600139E1D /* UIColor+Extension.swift */,
 				E95807C9216C282A00139E1D /* UIView+Extension.swift */,
 				E95807CB216CF59900139E1D /* UIStackView+Extension.swift */,
-				E95807B7216C23EE00139E1D /* AppDelegate.swift */,
-				E95807B9216C23EE00139E1D /* ViewController.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E95807DE216D653000139E1D /* SwipingModel */ = {
+			isa = PBXGroup;
+			children = (
+				E95807D3216D1FCB00139E1D /* Page.swift */,
+			);
+			path = SwipingModel;
+			sourceTree = "<group>";
+		};
+		E95807DF216D654A00139E1D /* SwipingView */ = {
+			isa = PBXGroup;
+			children = (
+				E95807D1216D148800139E1D /* PageCell.swift */,
+			);
+			path = SwipingView;
+			sourceTree = "<group>";
+		};
+		E95807E0216D658900139E1D /* SwipingController */ = {
+			isa = PBXGroup;
+			children = (
 				E95807CF216D0A4A00139E1D /* SwipingController.swift */,
 				E95807D7216D625E00139E1D /* SwipingController+UICollectionView.swift */,
 				E95807D9216D632400139E1D /* SwipingController+UIScrollView.swift */,
 				E95807D5216D61B900139E1D /* SwipingController+Extension.swift */,
-				E95807D1216D148800139E1D /* PageCell.swift */,
-				E95807D3216D1FCB00139E1D /* Page.swift */,
+			);
+			path = SwipingController;
+			sourceTree = "<group>";
+		};
+		E95807E1216D65FB00139E1D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
 				E95807BE216C23F000139E1D /* Assets.xcassets */,
+				E95807B7216C23EE00139E1D /* AppDelegate.swift */,
 				E95807C0216C23F000139E1D /* LaunchScreen.storyboard */,
 				E95807C3216C23F000139E1D /* Info.plist */,
 			);
-			path = "user-walk-through-demo";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +191,7 @@
 			files = (
 				E95807C2216C23F000139E1D /* LaunchScreen.storyboard in Resources */,
 				E95807BF216C23F000139E1D /* Assets.xcassets in Resources */,
+				E95807E3216D666400139E1D /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,7 +352,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7UE9UR4QCD;
-				INFOPLIST_FILE = "user-walk-through-demo/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/user-walk-through-demo/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -326,7 +370,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7UE9UR4QCD;
-				INFOPLIST_FILE = "user-walk-through-demo/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/user-walk-through-demo/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
